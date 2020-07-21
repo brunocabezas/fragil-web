@@ -1,0 +1,28 @@
+version: "3"
+services:
+  elm:
+    image: aminnairi/elm
+    user: elm
+    working_dir: /home/elm
+    tty: true
+    entrypoint: elm
+    stdin_open: true
+    ports:
+      - 8000:8000
+    volumes:
+      - ./elm:/home/elm
+    command: ["reactor"]
+  keystonejs:
+    image: ntutselab/keystonejs
+    ports:
+      - "3000:3000"
+    # entrypoint: /app
+    links:
+      - mongodb
+    volumes:
+      - ./keystonejs/my-app/:/app
+    # command: ["cd /app", "node keystone.js"]
+  mongodb:
+    image: "mongo"
+    ports:
+      - "27017:27017"
