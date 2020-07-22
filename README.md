@@ -38,6 +38,12 @@ for More information please refer to
 
 ### Elm
 
+Install elm 0.19
+
+go to `/elm` and run `elm reactor`
+
+for more information on how to build the app: https://guide.elm-lang.org/install/elm.html
+
 ### KeystoneJS
 
 #### MOngo db
