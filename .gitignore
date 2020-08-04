@@ -1,13 +1,19 @@
 
 # elm-package generated files
+.elm
 elm-stuff
 # elm-repl generated files
 repl-temp-*
 
-.elm
+# keystonejs
 keystone-demo
 node_modules
 dist
+
+# mongodb
+data
+
+.env
 
 lib-cov
 *.gz
@@ -20,8 +26,3 @@ results
 
 npm-debug.log
 .DS_Store
-
-node_modules
-ACCOUNTS
-
-.env

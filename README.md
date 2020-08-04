@@ -1,16 +1,16 @@
 # Fragil Web
 
-Portfolio made with elm with KeystoneJS as backend.
+Portfolio made with Elm and KeystoneJS.
 
 ## Development
 
-Development can't be done with different ways:
+Development can be done with docker or by using npm tasks of each project.
 
 ### With docker
 
-Make sure your docker daemon is running
-
-Start the development server based on (docker-compose)[docker-compose.yml].
+1. Install [docker desktop](https://docs.docker.com/desktop/) or [docker toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
+2. Make sure your [docker daemon](https://docs.docker.com/config/daemon/) is running
+3. Start the dev server with (docker-compose)[docker-compose.yml]:
 
 ```
 docker-compose up
@@ -18,11 +18,11 @@ docker-compose up
 
 This will start 3 services
 
-- elm, on port 8000, changes will be displayed after refreshing the app
-- KeystoneJS
-- mongodb
+- `elm`: Elm app (on port 8000), changes are reflected after refreshing the page
+- `keystonejs`: KeystoneJS (on port 3000)
+- `mongodb`: MongoDB server (on port 27017)
 
-this will be available through the docker machine
+Depending on your docker installation, services will be available on `localhost` or trough the docker machine.
 
 You can also initiate each service separately by:
 
@@ -30,13 +30,17 @@ You can also initiate each service separately by:
 docker-compose up <service_name> // e.g. docker-compose up elm
 ```
 
-for More information please refer to
+For more information, check [docker-compose.yml](docker-compose.yml) and the [Official docs](https://docs.docker.com/compose/compose-file/).
 
-#### env variables
+#### ENV Variables
+
+TBD
 
 ### Manual
 
-### Elm
+Each project will be initiated separate.
+
+#### Frontend
 
 Install elm 0.19
 
@@ -44,10 +48,11 @@ go to `/elm` and run `elm reactor`
 
 for more information on how to build the app: https://guide.elm-lang.org/install/elm.html
 
-### KeystoneJS
+#### Backend
 
-#### MOngo db
+It's required to provide a mongo db service on 27017.
 
-In case docker is not possible to use, yo
+Check mutations on the graphql playground
+https://www.keystonejs.com/guides/intro-to-graphql#execution
 
-#### env variables
+[LINK_TO_KEYSTONEJS_README]
