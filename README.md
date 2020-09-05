@@ -9,7 +9,7 @@ Development can be done with docker or by using npm tasks of each project.
 ### With docker
 
 1. Install [docker desktop](https://docs.docker.com/desktop/) or [docker toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
-2. Make sure your [docker daemon](https://docs.docker.com/config/daemon/) is running
+2. Make sure your [docker daemon](https://docs.docker.com/config/daemon/) is running or use `docker-machine start <name_of_machine>`
 3. Start the dev server with (docker-compose)[docker-compose.yml]:
 
 ```
@@ -56,3 +56,8 @@ Check mutations on the graphql playground
 https://www.keystonejs.com/guides/intro-to-graphql#execution
 
 [LINK_TO_KEYSTONEJS_README]
+
+#### Resources
+
+- https://www.elm-spa.dev/guide
+-
