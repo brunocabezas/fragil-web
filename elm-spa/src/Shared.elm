@@ -70,9 +70,10 @@ view { page, toMsg } model =
     , body =
         [ div [ class "layout" ]
             [ header [ class "navbar" ]
-                [ a [ class "link", href (Route.toString Route.Top) ] [ text "Homepage" ]
-                , a [ class "link", href (Route.toString Route.NotFound) ] [ text "Not found" ]
-                , a [ class "link", href (Route.toString Route.About) ] [ text "About" ]
+                [ a [ class "link", href (Route.toString Route.Top) ] [ text "Proyectos" ]
+                , a [ class "link", href (Route.toString Route.About) ] [ text "Nosotros" ]
+                , a [ class "link", href (Route.toString Route.Products) ] [ text "Catalogo" ]
+                , a [ class "link", href (Route.toString Route.Contact) ] [ text "Contacto" ]
                 ]
             , div [ class "page" ] page.body
             ]

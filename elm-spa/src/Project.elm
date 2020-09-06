@@ -1,10 +1,12 @@
-module Project exposing (mocks)
+module Project exposing (Project, mocks)
 
 
 type alias Project =
-    { name : String, text : String, date : Int }
+    { id : Int, name : String, text : String, gallery : List String, abstract : String }
 
 
 mocks : List Project
 mocks =
-    [ { name = "name1", text = "text", date = 1 } ]
+    [ { id = 1, name = "name1", abstract = "hola", text = "text", gallery = [ "https://collection-wakawaka.world/media/d/36.jpg?22", "https://collection-wakawaka.world/media/d/37.jpg?22" ] }
+    , { id = 2, name = "name2", abstract = "hola", text = "text2", gallery = [ "https://collection-wakawaka.world/media/d/36.jpg?22", "https://collection-wakawaka.world/media/d/37.jpg?22" ] }
+    ]
