@@ -1,17 +1,14 @@
 version: "3"
 services:
-  elm:
-    image: aminnairi/elm
-    user: elm
-    working_dir: /home/elm
-    tty: true
-    entrypoint: elm
-    stdin_open: true
+  vue-ui:
+    build:
+      context: ./vue-spa
     ports:
-      - 8000:8000
+      - "8080:8080"
+    container_name: vue-ui
     volumes:
-      - ./elm:/home/elm
-    command: ["reactor"]
+       - ./vue-spa:/usr/src/app/my-app
+       - /usr/src/app/my-app/node_modules
   keystonejs:
     image: ntutselab/keystonejs
     ports:
@@ -19,8 +16,8 @@ services:
     # entrypoint: /app
     links:
       - mongodb
-    volumes:
-      - ./keystonejs/:/app
+    # volumes:
+    #   - ./keystonejs/:/app
   mongodb:
     image: "mongo"
     ports:
