@@ -70,8 +70,7 @@ view { page, toMsg } model =
     , body =
         [ div [ class "layout" ]
             [ header [ class "navbar" ]
-                [ a [ class "link", href (Route.toString Route.Top) ] [ text "Proyectos" ]
-                , a [ class "link", href (Route.toString Route.About) ] [ text "Nosotros" ]
+                [ a [ class "link", href (Route.toString Route.About) ] [ text "Nosotros" ]
                 , a [ class "link", href (Route.toString Route.Products) ] [ text "Catalogo" ]
                 , a [ class "link", href (Route.toString Route.Contact) ] [ text "Contacto" ]
                 ]
