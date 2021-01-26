@@ -3,6 +3,10 @@ const { GraphQLApp } = require("@keystonejs/app-graphql")
 const { AdminUIApp } = require("@keystonejs/app-admin-ui")
 const { MongooseAdapter: Adapter } = require("@keystonejs/adapter-mongoose")
 
+// Import models
+const PageSchema = require("./models/Page.js")
+const ProjectSchema = require("./models/Project.js")
+
 const PROJECT_NAME = "Fragil"
 const adapterConfig = {
   mongoUri:
@@ -25,9 +29,9 @@ const keystone = new Keystone({
   userModel: "User",
   cookieSecret: process.env.COOKIE_SECRET || "demo",
 })
+keystone.createList("Pagina", PageSchema)
+keystone.createList("Proyecto", ProjectSchema)
 
-const TodoSchema = require("./models/TodoList.js")
-keystone.createList("Todo", TodoSchema)
 module.exports = {
   keystone,
   apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true })],
